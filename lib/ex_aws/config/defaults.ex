@@ -16,6 +16,12 @@ defmodule ExAws.Config.Defaults do
   }
 
   @defaults %{
+    athena: %{
+      scheme: "https://",
+      host: {"$region", "athena.$region.amazonaws.com"},
+      region: "us-east-1",
+      port: 443
+    },
     cloudformation: %{
       scheme: "https://",
       host: {"$region", "cloudformation.$region.amazonaws.com"},
